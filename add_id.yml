@@ -1,0 +1,17 @@
+---
+- hosts: all
+  user: jaoua
+  gather_facts: no
+  roles:
+  - kwoodson.yedit
+  tasks:
+  - name: add a specific value
+    yedit:
+      src: /home/jaoua/logstash.yml
+      separator: ':'
+      append: true
+      key: xpack.management.pipeline.id
+      value: hhhhhhhh
+      state: present
+    register: yeditout
+  - debug: var=yeditout
