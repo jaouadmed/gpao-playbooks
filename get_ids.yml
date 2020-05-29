@@ -7,7 +7,7 @@
   tasks:
   - name: get a specific value
     yedit:
-      src: /etc/logstash/logstash.yaml
+      src: /etc/logstash/logstash.yml
       state: list
       key: xpack.management.pipeline.id
     register: yeditout
