@@ -7,7 +7,7 @@
   tasks:
   - name: get a specific value
     yedit:
-      src: /etc/logstash/logstash.yml
+      src: /home/jaoua/logstash.yml
       state: list
       key: xpack.management.elasticsearch.username
     register: yeditout
