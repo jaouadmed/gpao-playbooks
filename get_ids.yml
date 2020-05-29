@@ -8,7 +8,11 @@
   - name: get a specific value
     yedit:
       src: /home/jaoua/logstash.yml
-      state: list
-      key: xpack.management.elasticsearch.username
+      edits:
+      - key: xpack.management.elasticsearch.username
+        value: a
+      - key: a.b.c.d
+        value: xpack.management.elasticsearch.password
+      state: present
     register: yeditout
   - debug: var=yeditout
