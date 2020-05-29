@@ -7,7 +7,7 @@
   tasks:
   - name: remove a specific value
     yedit:
-      src: /home/jaoua/logstash.yml
+      src: /etc/logstash/logstash.yml
       separator: ':'
       append: true
       key: xpack.management.pipeline.id
