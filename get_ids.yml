@@ -9,6 +9,6 @@
     yedit:
       src: /etc/logstash/logstash.yml
       state: list
-      key: xpack.management.pipeline.id
+      key: xpack.management.elasticsearch.username
     register: yeditout
   - debug: var=yeditout
