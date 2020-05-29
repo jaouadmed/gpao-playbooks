@@ -10,10 +10,7 @@
       src: /home/jaoua/logstash.yml
       separator: ':'
       edits:
-      - key: xpack.management.elasticsearch.username
-        value: a
-      - key: a.b.c.d
-        value: xpack.management.elasticsearch.password
-      state: present
+      - key: xpack.management.pipeline.id
+      state: list
     register: yeditout
   - debug: var=yeditout
