@@ -12,7 +12,7 @@
     yedit:
       src: /etc/logstash/logstash.yml
       separator: ':'
-      append: true
+      update: true
       key: xpack.management.pipeline.id
       value: "{{ pipeline_id }}"
       state: absent
