@@ -1,6 +1,7 @@
 ---
 - hosts: all
   user: jaoua
+  become: yes
   gather_facts: no
   roles:
   - kwoodson.yedit
