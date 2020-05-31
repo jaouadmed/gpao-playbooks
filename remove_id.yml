@@ -2,7 +2,7 @@
 - hosts: all
   user: jaoua
   become: yes
-  become_yser: jaoua
+  become_user: jaoua
   gather_facts: no 
   roles:
   - kwoodson.yedit
