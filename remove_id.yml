@@ -3,6 +3,7 @@
   user: jaoua
   become: yes
   become_user: jaoua
+  become_method: sudo
   gather_facts: no 
   roles:
   - kwoodson.yedit
