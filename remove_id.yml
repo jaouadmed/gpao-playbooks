@@ -13,8 +13,7 @@
       src: /etc/logstash/pipelines.yml
       separator: ':'
       update: true
-      key: pipelines.pipeline.id
-      value: "{{ pipeline_id }}"
+      index: "{{ pipeline_index }}"
       state: absent
     register: yeditout
   - debug: var=yeditout

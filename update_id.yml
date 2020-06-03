@@ -12,7 +12,8 @@
     yedit:
       src: /etc/logstash/pipelines.yml
       separator: ':'
-      append: true
+      update: true
+      index: "{{ pipeline_index }}"
       value: 
         pipeline.id: "{{ pipeline_id }}"
         config.string: "{{ pipeline_string }}"
