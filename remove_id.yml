@@ -10,10 +10,10 @@
   tasks:
   - name: remove a specific value
     yedit:
-      src: /etc/logstash/logstash.yml
+      src: /etc/logstash/pipelines.yml
       separator: ':'
       update: true
-      key: xpack.management.pipeline.id
+      key: pipeline.id
       value: "{{ pipeline_id }}"
       state: absent
     register: yeditout
