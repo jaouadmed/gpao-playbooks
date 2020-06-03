@@ -9,6 +9,7 @@
     yedit:
       src: /etc/logstash/pipelines.yml
       separator: ':'
+      key: pipelines
       state: list
     register: yeditout
   - debug: var=yeditout
