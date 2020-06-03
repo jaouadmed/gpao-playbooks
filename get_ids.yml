@@ -9,7 +9,7 @@
     yedit:
       src: /etc/logstash/pipelines.yml
       separator: ':'
-      key: "[1].pipeline.id"
+      key: "[1]"
       state: list
     register: yeditout
   - debug: var=yeditout
