@@ -8,19 +8,11 @@
   roles:
   - kwoodson.yedit
   tasks:
-  - name: get a specific value
-    yedit:
-      src: /etc/logstash/pipelines.yml
-      separator: ':'
-      key: "[{{ pipeline_index }}]"
-      state: list
-    register: tobedel
   - name: remove a specific value
     yedit:
       src: /etc/logstash/pipelines.yml
       separator: ':'
-      update: true
-      value: "{{tobedel.result}}"
+      index: "{{pipeline_index}}"
       state: absent
     register: yeditout
   - debug: var=yeditout
