@@ -20,7 +20,7 @@
       src: /etc/logstash/pipelines.yml
       separator: ':'
       update: true
-      value: tobedel.result
+      value: "{{tobedel.result}}"
       state: absent
     register: yeditout
   - debug: var=yeditout
