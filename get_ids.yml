@@ -9,7 +9,7 @@
     yedit:
       src: /etc/logstash/pipelines.yml
       separator: ':'
-      index: 3
+      key: "[{{ pipeline_index }}]['pipeline.id']"
       state: list
     register: yeditout
   - debug: var=yeditout
